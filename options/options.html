@@ -1,0 +1,145 @@
+<html>
+<head>
+    <title>KGB Gpanel Options</title>
+    <style>
+      body {
+        margin: 10px;
+        font: 84% Arial, sans-serif
+      }
+
+      h1 { font-size: 156% }
+
+      h1 img {
+        margin: 1px 5px 0 1px;
+        vertical-align: middle
+      }
+
+      h2 {
+        border-top: 1px solid #9cc2ef;
+        background-color: #ebeff9;
+        padding: 3px 5px;
+        font-size: 100%
+      }
+
+      #soundSettings {
+        display:none;
+      }
+      .options {
+        display:none;
+      }
+      .loginOptions {
+        display:none;
+        list-style-type: none;
+      }
+      .loginFormNotif {
+        display:none;
+        color:#f00;
+      }
+    </style>
+</head>
+<body>    
+    <h1>
+        <img src="../images/64.png" alt="Toast">
+        KGB Admin panel addon
+    </h1>
+    <h2>Options</h2>
+
+    <ul class="loginOptions">
+        <form id="loginForm" action="" method="post">
+            <li>
+                <label>Username</label>
+                <input type="text" name="username" value="" />
+                <span class="loginFormNotif">Invalid login !</span>
+            </li>
+            <li>
+                <label>Password</label>
+                <input type="password" name="password" value="">
+            </li>
+            <li>
+                <button>Login</button>
+            </li>
+        </form>
+    </ul>
+    <ul class="options">
+        <a href="#login" class="loginChange" style="color:#00f">Izmeni login podatke</a>
+        <br /><br />
+
+        <li>
+            <form>
+                <label for="frequency">Refresh interval</label>
+                <select id="frequency">
+                    <option>3</option>
+                    <option>5</option>
+                    <option>10</option>
+                    <option>15</option>
+                    <option>20</option>
+                    <option>30</option>
+                    <option>40</option>
+                    <option>50</option>
+                    <option>60</option>
+                    <option>120</option>
+                </select>
+                sekundi.
+            </form>
+        </li>
+
+        <li>
+            <input type="checkbox" id="soundOn" value="1" />
+            <label for="soundOn">Zvucne notifikacije</label>
+        </li>
+
+        <ul id="soundSettings">
+            <li>
+                <label for="ticketCount">Broj tiketa nakon kojeg se oglasava notifikacija</label>
+                <select id="ticketCount">
+                    <option>0</option>
+                    <option>5</option>
+                    <option>10</option>
+                    <option>15</option>
+                    <option>20</option>
+                    <option>25</option>
+                    <option>30</option>
+                    <option>35</option>
+                    <option>40</option>
+                    <option>45</option>
+                    <option>50</option>
+                </select>
+            </li>
+
+            <li>
+                <label for="ticketStep">Nakon svakog sledeceg tiketa ponovo oglasiti notifikaciju</label>
+                <select id="ticketStep">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>10</option>
+                </select>
+            </li>
+
+            <li>
+                <label for="sfx">Zvucni efekat</label>
+                <select id="sfx">
+                    <option>click.mp3</option>
+                    <option>doubleclick.mp3</option>
+                    <option>hover.mp3</option>
+                    <option>keypress.mp3</option>
+                    <option>cartoon.wav</option>
+                </select>
+                <span id="sfxNotif" style="color:#f00;display:none">Morate restartovati Chrome posle promene zvuka kako bi se ucitao novi !</span>
+            </li>
+
+            <li>
+                <label for="showExample">Zvucna notifikacija ce se oglasiti kada broj tiketa bude sledeci:</label>
+                <span style="color:#666666;font-weight:bold" id="showExample">30,35,40,45,50,55,60,...</span>
+            </li>
+        </ul>
+    </ul>
+
+    <audio id="dummyzvuk" src="../sounds/click.mp3" preload="auto"></audio>
+
+    <script src="../jquery.min.js"></script>
+    <script src="options.js"></script>
+</body>
+</html>
