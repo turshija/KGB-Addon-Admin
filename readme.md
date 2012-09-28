@@ -1,7 +1,12 @@
 KGB Admin extension for Chrome
 ==============================
 
-Ovaj addon je koristan samo podrsci KGB Hostinga.
+NAPOMENA
+--------
+Ovaj addon je koristan samo podrsci KGB Hostinga i ne radi bez admin naloga !
 
-Download:
+Sluzi za zvucne notifikacije kao i prikazivanje broja otvorenih tiketa na supportu.
+
+Download
+--------
 https://chrome.google.com/webstore/detail/bdkjeblcmbebmaficgmalmpopnglacpg?hl=en-US&utm_source=chrome-ntp-launcher
