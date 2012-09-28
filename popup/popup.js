@@ -1,4 +1,13 @@
-$(document).ready(function() {
+/****************************************************************
+ * KGB Admin extension for Chrome
+ * Version 2.2 (28-SEP-2012)
+ * Copyright (c) 2007-2012 KGB Hosting d.o.o.
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ ***************************************************************/
+
+ $(document).ready(function() {
     if ( (!localStorage.username) || (!localStorage.password) ) {
         $('body').find('ul').remove().end().append('Desni klik na ikonicu -> Options da biste podesili podatke za login !');
     } else {
